@@ -1,0 +1,31 @@
+{
+  "name": "@lynx-sdk/fetch",
+  "version": "0.0.0-semantic-release",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/esm/index.d.ts",
+  "license": "MIT",
+  "homepage": "https://github.com/jiaqi-ienyan/lynx-fetch",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jiaqi-ienyan/lynx-fetch.git",
+    "directory": "packages/fetch"
+  },
+  "bugs": {
+    "url": "https://github.com/jiaqi-ienyan/lynx-fetch/issues"
+  },
+  "sideEffects": false,
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
+  "devDependencies": {
+    "@types/jest": "^27.0.2",
+    "@types/node-fetch": "^2.5.12"
+  },
+  "dependencies": {
+    "@lynx-sdk/constants": "jiaqi-ienyan/lynx-constants#main",
+    "node-fetch": "^2.6.7",
+    "tiny-invariant": "^1.1.0"
+  }
+}
