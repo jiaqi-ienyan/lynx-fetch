@@ -4,7 +4,7 @@
 
 "@lynx-sdk/constants@jiaqi-ienyan/lynx-constants#main":
   version "0.0.0-semantic-release"
-  resolved "https://codeload.github.com/jiaqi-ienyan/lynx-constants/tar.gz/58d4b6d31f6232263bed26c80c1a21628bbede37"
+  resolved "https://codeload.github.com/jiaqi-ienyan/lynx-constants/tar.gz/2b4932c063acea96fcd02d86faa86884c376efe5"
   dependencies:
     tiny-invariant "^1.1.0"
 
@@ -178,6 +178,11 @@ tr46@~0.0.3:
   version "0.0.3"
   resolved "https://registry.npmmirror.com/tr46/-/tr46-0.0.3.tgz#8184fd347dac9cdc185992f3a6622e14b9d9ab6a"
   integrity sha512-N3WMsuqV66lT30CrXNbEjx4GEwlow3v6rr4mCcv6prnfwhS01rkgyFdjPNBYd9br7LpXV1+Emh01fHnq2Gdgrw==
+
+typescript@^5.3.3:
+  version "5.3.3"
+  resolved "https://registry.npmmirror.com/typescript/-/typescript-5.3.3.tgz#b3ce6ba258e72e6305ba66f5c9b452aaee3ffe37"
+  integrity sha512-pXWcraxM0uxAS+tN0AG/BF2TyqmHO014Z070UsJ+pFvYuRSq8KH8DmWpnbXe0pEPDHXZV3FcAbJkijJ5oNEnWw==
 
 undici-types@~5.26.4:
   version "5.26.5"
