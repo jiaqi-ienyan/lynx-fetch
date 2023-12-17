@@ -1,44 +1,50 @@
-import { CHAINS } from '@lynx-sdk/constants';
-import invariant from 'tiny-invariant';
-export const getInfuraRPCUrl = (chainId, apiKey) => {
-    invariant(apiKey && typeof apiKey === 'string', 'API key should be a string');
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.getRPCUrls = exports.getAlchemyRPCUrl = exports.getInfuraRPCUrl = void 0;
+var constants_1 = require("@lynx-sdk/constants");
+var tiny_invariant_1 = require("tiny-invariant");
+var getInfuraRPCUrl = function (chainId, apiKey) {
+    (0, tiny_invariant_1.default)(apiKey && typeof apiKey === 'string', 'API key should be a string');
     switch (chainId) {
-        case CHAINS.Mainnet:
-            return `https://mainnet.infura.io/v3/${apiKey}`;
-        case CHAINS.Ropsten:
-            return `https://ropsten.infura.io/v3/${apiKey}`;
-        case CHAINS.Rinkeby:
-            return `https://rinkeby.infura.io/v3/${apiKey}`;
-        case CHAINS.Goerli:
-            return `https://goerli.infura.io/v3/${apiKey}`;
-        case CHAINS.Kovan:
-            return `https://kovan.infura.io/v3/${apiKey}`;
+        case constants_1.CHAINS.Mainnet:
+            return "https://mainnet.infura.io/v3/".concat(apiKey);
+        case constants_1.CHAINS.Ropsten:
+            return "https://ropsten.infura.io/v3/".concat(apiKey);
+        case constants_1.CHAINS.Rinkeby:
+            return "https://rinkeby.infura.io/v3/".concat(apiKey);
+        case constants_1.CHAINS.Goerli:
+            return "https://goerli.infura.io/v3/".concat(apiKey);
+        case constants_1.CHAINS.Kovan:
+            return "https://kovan.infura.io/v3/".concat(apiKey);
         default:
-            invariant(false, 'Chain is not supported');
+            (0, tiny_invariant_1.default)(false, 'Chain is not supported');
     }
 };
-export const getAlchemyRPCUrl = (chainId, apiKey) => {
-    invariant(apiKey && typeof apiKey === 'string', 'API key should be a string');
+exports.getInfuraRPCUrl = getInfuraRPCUrl;
+var getAlchemyRPCUrl = function (chainId, apiKey) {
+    (0, tiny_invariant_1.default)(apiKey && typeof apiKey === 'string', 'API key should be a string');
     switch (chainId) {
-        case CHAINS.Mainnet:
-            return `https://eth-mainnet.alchemyapi.io/v2/${apiKey}`;
-        case CHAINS.Ropsten:
-            return `https://eth-ropsten.alchemyapi.io/v2/${apiKey}`;
-        case CHAINS.Rinkeby:
-            return `https://eth-rinkeby.alchemyapi.io/v2/${apiKey}`;
-        case CHAINS.Goerli:
-            return `https://eth-goerli.alchemyapi.io/v2/${apiKey}`;
-        case CHAINS.Kovan:
-            return `https://eth-kovan.alchemyapi.io/v2/${apiKey}`;
+        case constants_1.CHAINS.Mainnet:
+            return "https://eth-mainnet.alchemyapi.io/v2/".concat(apiKey);
+        case constants_1.CHAINS.Ropsten:
+            return "https://eth-ropsten.alchemyapi.io/v2/".concat(apiKey);
+        case constants_1.CHAINS.Rinkeby:
+            return "https://eth-rinkeby.alchemyapi.io/v2/".concat(apiKey);
+        case constants_1.CHAINS.Goerli:
+            return "https://eth-goerli.alchemyapi.io/v2/".concat(apiKey);
+        case constants_1.CHAINS.Kovan:
+            return "https://eth-kovan.alchemyapi.io/v2/".concat(apiKey);
         default:
-            invariant(false, 'Chain is not supported');
+            (0, tiny_invariant_1.default)(false, 'Chain is not supported');
     }
 };
-export const getRPCUrls = (chainId, keys) => {
-    const urls = [];
+exports.getAlchemyRPCUrl = getAlchemyRPCUrl;
+var getRPCUrls = function (chainId, keys) {
+    var urls = [];
     if (keys.alchemy)
-        urls.push(getAlchemyRPCUrl(chainId, keys.alchemy));
+        urls.push((0, exports.getAlchemyRPCUrl)(chainId, keys.alchemy));
     if (keys.infura)
-        urls.push(getInfuraRPCUrl(chainId, keys.infura));
+        urls.push((0, exports.getInfuraRPCUrl)(chainId, keys.infura));
     return urls;
 };
+exports.getRPCUrls = getRPCUrls;
