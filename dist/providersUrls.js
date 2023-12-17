@@ -2,9 +2,9 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.getRPCUrls = exports.getAlchemyRPCUrl = exports.getInfuraRPCUrl = void 0;
 var constants_1 = require("@lido-sdk/constants");
-var tiny_invariant_1 = require("tiny-invariant");
+var invariant = require("tiny-invariant");
 var getInfuraRPCUrl = function (chainId, apiKey) {
-    (0, tiny_invariant_1.default)(apiKey && typeof apiKey === 'string', 'API key should be a string');
+    invariant(apiKey && typeof apiKey === 'string', 'API key should be a string');
     switch (chainId) {
         case constants_1.CHAINS.Mainnet:
             return "https://mainnet.infura.io/v3/".concat(apiKey);
@@ -17,12 +17,12 @@ var getInfuraRPCUrl = function (chainId, apiKey) {
         case constants_1.CHAINS.Kovan:
             return "https://kovan.infura.io/v3/".concat(apiKey);
         default:
-            (0, tiny_invariant_1.default)(false, 'Chain is not supported');
+            invariant(false, 'Chain is not supported');
     }
 };
 exports.getInfuraRPCUrl = getInfuraRPCUrl;
 var getAlchemyRPCUrl = function (chainId, apiKey) {
-    (0, tiny_invariant_1.default)(apiKey && typeof apiKey === 'string', 'API key should be a string');
+    invariant(apiKey && typeof apiKey === 'string', 'API key should be a string');
     switch (chainId) {
         case constants_1.CHAINS.Mainnet:
             return "https://eth-mainnet.alchemyapi.io/v2/".concat(apiKey);
@@ -35,7 +35,7 @@ var getAlchemyRPCUrl = function (chainId, apiKey) {
         case constants_1.CHAINS.Kovan:
             return "https://eth-kovan.alchemyapi.io/v2/".concat(apiKey);
         default:
-            (0, tiny_invariant_1.default)(false, 'Chain is not supported');
+            invariant(false, 'Chain is not supported');
     }
 };
 exports.getAlchemyRPCUrl = getAlchemyRPCUrl;

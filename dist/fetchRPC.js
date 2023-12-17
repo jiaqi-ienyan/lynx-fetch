@@ -32,7 +32,7 @@ var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.fetchRPC = void 0;
-var tiny_invariant_1 = require("tiny-invariant");
+var invariant = require("tiny-invariant");
 var fetchWithFallbacks_1 = require("./fetchWithFallbacks");
 var providersUrls_1 = require("./providersUrls");
 var fetchRPC = function (chainId, options) {
@@ -41,12 +41,12 @@ var fetchRPC = function (chainId, options) {
         var url = value;
         if (typeof value === 'function')
             url = value(chainId);
-        (0, tiny_invariant_1.default)(typeof url === 'string', 'URL should be a string');
+        invariant(typeof url === 'string', 'URL should be a string');
         return url;
     });
     var providersUrls = (0, providersUrls_1.getRPCUrls)(chainId, providers);
     var combinedUrls = __spreadArray(__spreadArray([], customUrls, true), providersUrls, true);
-    (0, tiny_invariant_1.default)(combinedUrls.length > 0, 'There are no API keys or URLs provided');
+    invariant(combinedUrls.length > 0, 'There are no API keys or URLs provided');
     return (0, fetchWithFallbacks_1.fetchWithFallbacks)(combinedUrls, __assign({ method: 'POST' }, init));
 };
 exports.fetchRPC = fetchRPC;

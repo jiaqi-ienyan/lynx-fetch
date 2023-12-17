@@ -1,4 +1,4 @@
-import invariant from 'tiny-invariant'
+import * as invariant from 'tiny-invariant'
 import { CHAINS } from '@lido-sdk/constants'
 import { fetchWithFallbacks } from './fetchWithFallbacks'
 import { getRPCUrls, RPCProvidersKeys } from './providersUrls'

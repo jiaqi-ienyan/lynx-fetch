@@ -48,7 +48,7 @@ var __rest = (this && this.__rest) || function (s, e) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.fetchWithFallbacks = void 0;
-var tiny_invariant_1 = require("tiny-invariant");
+var invariant = require("tiny-invariant");
 var fetch_1 = require("./fetch");
 var fetchWithFallbacks = function (inputs, options) {
     if (options === void 0) { options = {}; }
@@ -57,7 +57,7 @@ var fetchWithFallbacks = function (inputs, options) {
         return __generator(this, function (_b) {
             switch (_b.label) {
                 case 0:
-                    (0, tiny_invariant_1.default)(inputs.length > 0, 'Inputs are required');
+                    invariant(inputs.length > 0, 'Inputs are required');
                     _a = options.fetch, fetch = _a === void 0 ? fetch_1.default : _a, init = __rest(options, ["fetch"]);
                     input = inputs[0], restInputs = inputs.slice(1);
                     _b.label = 1;
@@ -66,7 +66,7 @@ var fetchWithFallbacks = function (inputs, options) {
                     return [4 /*yield*/, fetch(input, init)];
                 case 2:
                     response = _b.sent();
-                    (0, tiny_invariant_1.default)(response === null || response === void 0 ? void 0 : response.ok, 'Request failed');
+                    invariant(response === null || response === void 0 ? void 0 : response.ok, 'Request failed');
                     return [2 /*return*/, response];
                 case 3:
                     error_1 = _b.sent();

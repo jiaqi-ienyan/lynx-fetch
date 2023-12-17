@@ -1,5 +1,5 @@
 import { CHAINS } from '@lido-sdk/constants'
-import invariant from 'tiny-invariant'
+import * as invariant from 'tiny-invariant'
 
 export const getInfuraRPCUrl = (chainId: CHAINS, apiKey: string): string => {
   invariant(apiKey && typeof apiKey === 'string', 'API key should be a string')
