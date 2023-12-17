@@ -2,7 +2,7 @@
 # yarn lockfile v1
 
 
-"@lynx-sdk/constants@git+https://github.com/jiaqi-ienyan/lynx-constants.git":
+"@lido-sdk/constants@git+https://github.com/jiaqi-ienyan/lynx-constants.git":
   version "0.0.0-semantic-release"
   resolved "git+https://github.com/jiaqi-ienyan/lynx-constants.git#6df1f7e7c1e811eb9af650afcd883e53f33abce2"
   dependencies:

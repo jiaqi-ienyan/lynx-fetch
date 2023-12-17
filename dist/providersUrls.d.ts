@@ -1,4 +1,4 @@
-import { CHAINS } from '@lynx-sdk/constants';
+import { CHAINS } from '@lido-sdk/constants';
 export declare const getInfuraRPCUrl: (chainId: CHAINS, apiKey: string) => string;
 export declare const getAlchemyRPCUrl: (chainId: CHAINS, apiKey: string) => string;
 export interface RPCProvidersKeys {

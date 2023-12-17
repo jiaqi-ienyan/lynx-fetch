@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.getRPCUrls = exports.getAlchemyRPCUrl = exports.getInfuraRPCUrl = void 0;
-var constants_1 = require("@lynx-sdk/constants");
+var constants_1 = require("@lido-sdk/constants");
 var tiny_invariant_1 = require("tiny-invariant");
 var getInfuraRPCUrl = function (chainId, apiKey) {
     (0, tiny_invariant_1.default)(apiKey && typeof apiKey === 'string', 'API key should be a string');

@@ -1,4 +1,4 @@
-import { CHAINS } from '@lynx-sdk/constants'
+import { CHAINS } from '@lido-sdk/constants'
 import invariant from 'tiny-invariant'
 
 export const getInfuraRPCUrl = (chainId: CHAINS, apiKey: string): string => {

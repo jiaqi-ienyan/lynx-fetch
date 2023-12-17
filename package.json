@@ -24,7 +24,7 @@
     "@types/node-fetch": "^2.5.12"
   },
   "dependencies": {
-    "@lynx-sdk/constants": "git+https://github.com/jiaqi-ienyan/lynx-constants.git",
+    "@lido-sdk/constants": "git+https://github.com/jiaqi-ienyan/lynx-constants.git",
     "node-fetch": "^2.6.7",
     "tiny-invariant": "^1.1.0",
     "typescript": "^5.3.3"

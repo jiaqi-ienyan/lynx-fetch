@@ -1,4 +1,4 @@
-import { CHAINS } from '@lynx-sdk/constants';
+import { CHAINS } from '@lido-sdk/constants';
 import { RPCProvidersKeys } from './providersUrls';
 import { RequestInit, Response } from './fetch';
 export type FetRPCUrl = (chainId: CHAINS) => string;
